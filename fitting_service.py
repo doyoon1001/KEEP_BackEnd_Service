@@ -88,6 +88,7 @@ def create_request(item: CreateRequestItem):
         session_id=item.session_id
     )
     requests_db.append(new_request)
+    print(f"🔔 새로운 피팅 요청: {item.product_name} ({item.size}) - 세션: {item.session_id}")
     return new_request
 
 @app.get("/api/requests")
